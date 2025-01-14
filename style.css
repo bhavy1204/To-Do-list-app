@@ -1,41 +1,65 @@
-
-body{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(143, 144, 144);
-    overflow: hidden;
+body {
+  height: 90px;
+  width: 100vw;
+  background-color: rgb(143, 144, 144);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px;
 }
-.top{
-    width: 100vw;
-    height: 10vh;
-    border-bottom: 1px solid gray;
-    margin: 10px;
-    text-align: center;
-    font-family: "Merriweather", serif;
-    font-weight: 300;
-    font-style: normal;
+body::-webkit-scrollbar {
+  display: none;
 }
-.sidebar{
-    height: 90vh;
-    width: 25vw;
-    background-color:rgb(228, 227, 227);
-    border-radius: 20px;
-    margin: auto 0;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
+.top {
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 1px solid gray;
+  margin: 10px;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
 }
-hr{
-    width: 90%;
+.sidebar {
+  height: 90vh;
+  width: 25vw;
+  background-color: rgb(202, 202, 202);
+  border-radius: 20px;
+  margin: auto 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-h4{
-    margin: 0px;
-    font-size: 30px;
-    text-align: center;
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
-.sidebar input{
-    color: rgb(54, 63, 63);
-    border-radius: 10px;
-    text-align: center;
-    margin: 10px 0;
+hr {
+  color: black;
+  width: 90%;
+}
+h4 {
+  margin: 0px;
+  font-size: 30px;
+  text-align: center;
+}
+.sidebar input {
+  color: rgb(54, 63, 63);
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+.tasks {
+  font-family: "Merriweather", serif;
+  color: darkcyan;
+  margin: 2px;
+}
+.footer {
+  margin-top: 10px;
+  height: 200px;
+  width: 100vw;
+  background-color: rgb(53, 52, 52);
+  border-radius: 20px 20px 0px 0px;
+  border-top: 2px solid black;
 }
