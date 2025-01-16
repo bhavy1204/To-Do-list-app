@@ -9,6 +9,14 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.main{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
 .top {
   width: 100vw;
   height: 10vh;
@@ -27,6 +35,7 @@ body::-webkit-scrollbar {
   margin: auto 0;
   padding: 12px;
   display: flex;
+  display: inline-block;
   flex-direction: column;
   overflow-y: auto;
   scrollbar-width: none;
@@ -81,3 +90,12 @@ h4 {
   margin: 3px;
 }
 
+.calender-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#CH{
+  text-align: center;
+}
