@@ -52,9 +52,17 @@ h4 {
 }
 .tasks {
   font-family: "Merriweather", serif;
-  color: darkcyan;
+  color: rgb(2, 9, 95);
   margin: 2px;
+  cursor:default;
 }
+
+
+.remove{
+  color: red;
+  text-decoration: line-through;
+}
+
 .footer {
   margin-top: 10px;
   height: 200px;

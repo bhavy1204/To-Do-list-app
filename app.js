@@ -6,12 +6,26 @@ let cnt=0;
 
 document.addEventListener("DOMContentLoaded", load);
 
+addTo.addEventListener("click",deleteTask);
+
+function deleteTask(e){
+  if(e.target.tagName === 'LI'){
+      e.target.remove();
+      cnt--;
+      count.textContent=cnt;
+      save();
+    }
+}
+
 function save(){
     const tasks= Array.from(addTo.children).map(task=>task.textContent);
     localStorage.setItem('tasks',JSON.stringify(tasks));
 }
+
 function load(){
     let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+    cnt=tasks.length;
+    count.textContent=cnt;
     tasks.forEach(taskText => {
         const NewTask = document.createElement('li');
         NewTask.textContent=taskText;
