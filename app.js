@@ -5,6 +5,9 @@ let count= document.querySelector("#taskCount");
 let cnt=0;
 
 document.addEventListener("DOMContentLoaded", load);
+document.addEventListener("DOMContentLoaded",function(){
+  generateCalender();
+});
 
 addTo.addEventListener("click",deleteTask);
 
@@ -52,3 +55,37 @@ inputElement.addEventListener("keydown",(e)=> {
 });
 
 
+// ---------ADDING CALENDER AND STREAK--------------------------------
+
+
+function generateCalender(){
+    const today= new Date();
+    const currentMonth = today.getMonth();
+    const currentYear= today.getFullYear();
+    const daysInMonth = new Date(currentYear,currentMonth+1,0).getDate();
+
+    const calenderTable = document.querySelector('.calender');
+    let tableHTML= '<tr>';
+
+
+    for(let day=1;day<=daysInMonth;day++){
+      const date = new Date(currentYear,currentMonth,day);
+      const dayOfWeek = date.getDay();
+
+      if(day===1){
+        tableHTML +='<tr>'+'<td></td>'.repeat(dayOfWeek);
+      }
+
+      tableHTML+=`<td data-date = "${date.toISOString().split('T')[0]}">${day}</td>`;
+
+      if(dayOfWeek===6){
+        tableHTML+='</tr>'
+      }
+    }
+
+    if(new Date(currentYear,currentMonth,daysInMonth).getDate()!=6){
+      tableHTML+= '</tr>';
+    }
+
+    calenderTable.innerHTML=tableHTML;
+}
