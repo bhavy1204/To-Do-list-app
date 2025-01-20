@@ -1,3 +1,11 @@
-To Do app 
-It is a to do list with local storage.
+
+# To Do list
+
+This is a simple to do list with local Storage feature. It is still in development phase.
+
+
+## Tech Stack
+
+**Client:** Html, css, javascript 
+
 
